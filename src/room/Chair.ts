@@ -1,6 +1,16 @@
+import { Customer } from "../human/customer/Customer";
+
 export class Chair {
 
-    constructor(private chairId:number){};
+    constructor(private chairId:number,){};
 
     
 }
+
+
+
+    
+
+
+
+    

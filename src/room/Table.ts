@@ -8,17 +8,16 @@ export class Table{
     constructor(private chairId :number){}
 
     setCustomer(customer :Customer){
-        return this.customer = customer
+        let message = "";
+        if(this.customer.length > 10){
+            message = "this table can't add chair"
+        }
+        return message;
+
+
     }
+
     getNumberOfChair(){
         return this.chair.length;
     }
-    getChairs(){
-        return this.chair
-    }
-
-    addChair(table:Chair){
-        return this.chair.push(table);
-    }
-
 }
