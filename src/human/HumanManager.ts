@@ -1,6 +1,6 @@
-import { Staff } from "./staff/staff";
+import { Person } from "./Person";
 
 export class HumanManager {
-    private staffs : Staff[] = [];
+    private person : Person[] = [];
     
 }

@@ -1,32 +1,23 @@
-import { Gender, Person } from "../Person";
+import { Gender } from "../Gender";
+import { Person } from "../Person";
+import { StaffCategory } from "../StaffCategory";
 
-export enum StaffCategory {
-    CHEF = 'chaf',
-    CLEARNER = 'cleaner',
-    DELEVERY = 'delevery',
-    MANAGER = 'manager',
-    SECURITY = 'security',
-    WARITER = 'wariter',
-}
 
+/**
+ * A staff is a personn of the hospital with a salary
+ */
 export class Staff extends Person {
-    protected salary: number = 0; // by default
-  
-    constructor(
-      protected category: StaffCategory,
-      name: string,
-      age: number,
-      gender: Gender
-    ) {
-      super(name, age, gender);
-    }
-  
-    setSalary(salary: number) {
-      this.salary = salary;
-    }
-  
-    getSalary() {
-      return this.salary;
-    }
+
+  constructor(
+    protected category: StaffCategory,
+    name: string,
+    age: number,
+    gender: Gender,
+    salary: number = 0,
+  ) {
+    super(name, age, gender,salary);
   }
-  
+
+  getSalary() {
+  }
+}

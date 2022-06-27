@@ -1,5 +1,6 @@
-import { Gender } from "../Person";
-import { Staff, StaffCategory } from "./staff";
+import { Gender } from "../Gender";
+import { StaffCategory } from "../StaffCategory";
+import { Staff} from "./staff";
 
 export class Chef extends Staff {
 
