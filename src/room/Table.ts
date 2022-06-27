@@ -1,23 +1,25 @@
 import { Customer } from "../human/customer/Customer";
-import { Chair } from "./Chair";
 
 export class Table{
-    private customer : Customer;
-    private chair: Chair[]=[];
+    protected customer : Customer;
 
-    constructor(private chairId :number){}
+    constructor(protected tableId :number){}
 
     setCustomer(customer :Customer){
-        let message = "";
-        if(this.customer.length > 10){
-            message = "this table can't add chair"
-        }
-        return message;
-
-
+        return this.customer = customer;
     }
 
-    getNumberOfChair(){
-        return this.chair.length;
+    hasCustomer() {
+        return this.customer !== undefined;
     }
+
+    getCustomer() {
+        return this.customer;
+    }
+
+    getTableId() {
+        return this.tableId;
+    }
+
 }
+
