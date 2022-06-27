@@ -9,5 +9,3 @@ export class Cake extends Meal {
         return this.price;
     }
 }
-
-let sss = new Cake('dd',TypeMeal.CAKE,2222);
