@@ -1,23 +1,26 @@
 import { Gender } from "../Gender";
 import { Person } from "../Person";
-import { StaffCategory } from "../StaffCategory";
 
 
 /**
  * A staff is a personn of the hospital with a salary
  */
-export class Staff extends Person {
-
+export abstract class Staff extends Person {
+  protected salary: number;
   constructor(
-    protected category: StaffCategory,
     name: string,
     age: number,
     gender: Gender,
-    salary: number = 0,
+    address: string
   ) {
-    super(name, age, gender,salary);
+    super(name, age, gender,address);
   }
 
   getSalary() {
+    return this.salary;
+  }
+
+  setSalary(salary: number) {
+    return this.salary = salary;
   }
 }

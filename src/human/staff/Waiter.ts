@@ -4,13 +4,8 @@ import { StaffCategory } from "../StaffCategory";
 import { Staff } from "./staff";
 
 export class Waiter extends Staff {
-  private room: Room;
 
-  constructor(category: StaffCategory, name: string, age: number, gender: Gender) {
-    super(category, name, age, gender);
-  }
-  getWaiter(){
-    return this.room;
-
+  constructor(protected category = StaffCategory.WARITER, name: string, age: number, gender: Gender,address: string) {
+    super(name, age, gender, address);
   }
 }

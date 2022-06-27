@@ -10,6 +10,7 @@ export abstract class Person {
     protected name: string,
     protected age: number,
     protected gender: Gender,
+    protected address: string,
     protected phone?: number,
 
   ) {}

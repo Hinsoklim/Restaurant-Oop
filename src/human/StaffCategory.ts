@@ -1,9 +1,9 @@
 export enum StaffCategory {
-    CHEF = 'chaf',
-    ACCOUNTANT='accountant',
-    CLEARNER = 'cleaner',
-    DELEVERY = 'delevery',
-    MANAGER = 'manager',
-    SECURITY = 'security',
-    WARITER = 'wariter',
+    CHEF = 'CHEF',
+    ACCOUNTANT='ACCOUNTANT',
+    CLEARNER = 'CLEARNER',
+    DELIVER = 'DELIVER',
+    MANAGER = 'MANAGER',
+    SECURITY = 'SECURITY',
+    WARITER = 'WARITER',
 }
