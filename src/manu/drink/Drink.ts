@@ -5,4 +5,8 @@ export class Drink extends Meal {
     constructor(name: string, typeMeal: TypeMeal,price: number){
         super(name, typeMeal,price);
     }
+
+    getPrice(): number {
+        return this.price;
+    }
 }
