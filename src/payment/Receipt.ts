@@ -4,12 +4,8 @@ import { Pay } from "./Pay";
 
 export class Receipt {
     protected pay: Pay;
-    constructor(
-        protected customer: Customer, 
-        protected numberMoney: number,
+    constructor( 
         protected order: Order,
-        protected roomId: number, 
-        protected tableId: number
     ) { }
 
     getTotalOrder() {
