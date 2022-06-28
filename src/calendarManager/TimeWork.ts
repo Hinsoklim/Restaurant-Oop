@@ -1,4 +1,4 @@
 import { Time } from "./Time";
-export class Relax {
+export class TimeWork {
     constructor(protected time: Time) {}
 }

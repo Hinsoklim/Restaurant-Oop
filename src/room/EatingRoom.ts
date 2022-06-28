@@ -2,7 +2,7 @@ import { Customer } from "../human/customer/Customer";
 import { Waiter } from "../human/staff/Waiter";
 import { Table } from "./Table";
 
-export class Room{
+export class EatingRoom{
     protected tables: Table[]=[];
     protected waiters: Waiter[]=[];
     protected customers: Customer[] = [];

@@ -1,12 +1,12 @@
-import { Room } from "./Room";
+import { EatingRoom } from "./EatingRoom";
 import { Kitchen } from "./Kitchen";
 
 export class RoomManager {
-    protected rooms: Room[] = [];
+    protected rooms: EatingRoom[] = [];
     protected kitchen: Kitchen;
 
     // add room to room list
-    addRoom(room: Room){
+    addRoom(room: EatingRoom){
         return this.rooms.push(room);
     }
 

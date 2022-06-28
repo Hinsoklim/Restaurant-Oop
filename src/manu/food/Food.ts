@@ -6,7 +6,4 @@ export class Food extends Meal {
         super(name,price);
     }
     
-    getPrice(): number {
-        return this.price;
-    }
 }
