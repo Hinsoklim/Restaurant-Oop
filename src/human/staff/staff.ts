@@ -6,7 +6,6 @@ import { Person } from "../Person";
  * A staff is a personn of the hospital with a salary
  */
 export abstract class Staff extends Person {
-  protected salary: number;
   constructor(
     name: string,
     age: number,
@@ -14,13 +13,5 @@ export abstract class Staff extends Person {
     address: string
   ) {
     super(name, age, gender,address);
-  }
-
-  getSalary() {
-    return this.salary;
-  }
-
-  setSalary(salary: number) {
-    return this.salary = salary;
   }
 }

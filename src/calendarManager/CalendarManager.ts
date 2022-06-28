@@ -1,6 +1,9 @@
 import { Calendar } from "./Calendar";
-import { Holiday } from "./holiday";
 export class CalendarManager {
     protected calendar: Calendar;
-    protected holiday: Holiday;
+
+    // set the calendar
+    setCalendar(calendar: Calendar) {
+        return this.calendar = calendar;
+    }
 }
