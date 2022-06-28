@@ -26,5 +26,8 @@ export class Receipt {
             this.pay = newPay;
             return moneyChange;
         }
+        else{
+            console.log("Your money is too low");
+        }
     }
 }
