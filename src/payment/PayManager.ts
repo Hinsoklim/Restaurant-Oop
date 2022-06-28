@@ -23,7 +23,7 @@ export class PayManager {
             let moneyChange : number = 0;
             if(pay.getMoney() > this.order.getTotalPay()){
                 moneyChange = pay.getMoney() - this.order.getTotalPay();
-                let newPay = new Pay(pay.getCustomer(),this.order.getTotalPay(),pay.getAccountant(),pay.getDate(),pay.getRoomId(),pay.getTableId());
+                let newPay = new Pay(pay.getCustomer(),this.order.getTotalPay(),pay.getAccountant(),pay.getRoomId(),pay.getTableId());
                 this.pays.push(newPay);
 
                 return moneyChange;
