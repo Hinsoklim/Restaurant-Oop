@@ -1,8 +1,6 @@
 import { Calendar } from "./Calendar";
+import { Holiday } from "./holiday";
 export class CalendarManager {
     protected calendar: Calendar;
-
-    setDateOpen(date: Calendar){
-        this.calendar 
-    }
+    protected holiday: Holiday;
 }

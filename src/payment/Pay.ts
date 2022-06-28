@@ -6,4 +6,25 @@ export class Pay {
     getMoney() {
         return this.numberMoney;
     }
+
+    getCustomer() {
+        return this.customer;
+    }
+
+    getAccountant() {
+        return this.accountant;
+    }
+
+    getDate() {
+        return this.date;
+    }
+
+    getRoomId() {
+        return this.roomId;
+    }
+
+    getTableId() {
+        return this.tableId;
+    }
+
 }

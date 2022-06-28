@@ -5,5 +5,5 @@ export enum Date {
     THURSDAY = 'THURSDAY',
     FRIDAY = 'FRIDAY',
     SATURDAY = 'SATURDAY',
-    SANDAY = 'SANDAY',
+    SUNDAY = 'SUNDAY',
 }
