@@ -1,5 +1,10 @@
+import { Calendar } from "./calendarManager/Calendar";
+import { Date } from "./calendarManager/Date";
+import { Relax } from "./calendarManager/Relax";
+import { Time } from "./calendarManager/Time";
 import { Customer } from "./human/customer/Customer";
 import { Gender } from "./human/Gender";
+import { Accountant } from "./human/staff/Accountant";
 import { Chef } from "./human/staff/Chef";
 import { Deliver } from "./human/staff/Deliver";
 import { Waiter } from "./human/staff/Waiter";
@@ -10,6 +15,7 @@ import { Food } from "./manu/food/Food";
 import { ManuManager } from "./manu/ManuManager";
 import { TypeMeal } from "./manu/TypeMeal";
 import { Order } from "./order/Order";
+import { Pay } from "./payment/Pay";
 import { Restaurant } from "./Restaurant";
 import { Kitchen } from "./room/Kitchen";
 import { Room } from "./room/Room";
@@ -25,8 +31,15 @@ let soklim = new Customer('soklim',20,Gender.MALE,'2004st Robek Krom  Phen Pnom'
 let sreyMoa = new Customer('srey Moa',18,Gender.FEMALE,'2004st TekLrok3  Phen Pnom');
 
 // add Staff member
-let KoevAccounter = new Chef (StaffCategory.CHEF,'Koev',22,Gender.FEMALE,'Poelsat');
+let KoevAccounter = new Accountant(StaffCategory.ACCOUNTANT,'Koev',22,Gender.FEMALE,'Poelsat');
+let time =Time.TIMETWO;
+let relax = new Relax(time);
 KoevAccounter.setSalary(700);
+KoevAccounter.setRelaxTime(relax);
+
+let ronaChef = new Chef(StaffCategory.CHEF,'Rana',26,Gender.FEMALE,'kondal');
+KoevAccounter.setSalary(500);
+
 
 let kikiWaiter = new Waiter (StaffCategory.WARITER,'kiki',21,Gender.FEMALE,'KomportTom');
 kikiWaiter.setSalary(350);
@@ -74,6 +87,8 @@ let table3 = new Table(3);
 
 // add kitchen
 let kitchen = new Kitchen()
+chanSokRestaurent.rooms.setKitChen(kitchen);
 
+// add payment
+let sreyMoaCustomer = new Pay(sreyMoa,63,KoevAccounter,2,3)
 
-// chanSokRestaurent.manu.manuList.
