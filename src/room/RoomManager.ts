@@ -1,9 +1,9 @@
 import { Room } from "./Room";
-import { KitChen } from "./Kitchen";
+import { Kitchen } from "./Kitchen";
 
 export class RoomManager {
     protected rooms: Room[] = [];
-    protected kitchen: KitChen;
+    protected kitchen: Kitchen;
 
     // add room to room list
     addRoom(room: Room){
@@ -11,7 +11,7 @@ export class RoomManager {
     }
 
     // set kitchen
-    setKitChen(kitChen: KitChen) {
+    setKitChen(kitChen: Kitchen) {
         return this.kitchen = kitChen;
     }
 
