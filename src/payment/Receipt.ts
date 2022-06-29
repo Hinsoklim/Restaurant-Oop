@@ -1,6 +1,9 @@
 import { Waiter } from "../human/staff/Waiter";
 import { Order } from "../order/Order";
+import { Cash } from "./Cash";
+import { CreditCard } from "./CreditCard";
 import { Pay } from "./Pay";
+
 
 export class Receipt {
     protected pay: Pay;
@@ -13,18 +16,28 @@ export class Receipt {
         return this.order.getTotalPay();
     }
 
-    doPay(pay: Pay){
-        if(this.order.getTotalPay() === pay.getMoney()){
-            return this.pay = pay;
+    doPayCash(cashMoney: Cash){
+        if(this.order.getTotalPay() === cashMoney.getCash()) {
+            let newPay = new Pay(cashMoney.getCash());
+            return this.pay = newPay;
         }
-        else if(this.order.getTotalPay() < pay.getMoney()) {
-            let newPay = new Pay(this.order.getTotalPay());
-            let moneyChange = pay.getMoney() - this.order.getTotalPay();
+        else if(this.order.getTotalPay() < cashMoney.getCash()) {
+            let newPay = new Pay(cashMoney.getCash());
             this.pay = newPay;
-            return moneyChange;
+
+            return cashMoney.getCash() - this.order.getTotalPay();
         }
-        else{
-            console.log("Your money is too low");
-        }
+
+    }
+
+    doPayCard(card: CreditCard) {
+       let moneyPay = card.withDrow(this.order.getTotalPay());
+       if(moneyPay !== undefined) {
+        let newPay = new Pay(moneyPay);
+        return this.pay = newPay;
+       }
+       else {
+        console.log("Pay card not found");
+       }
     }
 }

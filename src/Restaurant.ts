@@ -4,6 +4,7 @@ import { RoomManager } from "./room/RoomManager";
 import { PayManager } from "./payment/PayManager";
 import { ManuManager } from "./manu/ManuManager";
 import { OrderManager } from "./order/OrderManager";
+import { OnlineOrderManager } from "./onlineOrder/OnlineOrderManager";
 
 export class Restaurant {
     
@@ -14,6 +15,7 @@ export class Restaurant {
     public payMent: PayManager = new PayManager();
     public manu: ManuManager = new ManuManager();
     public order: OrderManager = new OrderManager();
+    public onlineOrder: OnlineOrderManager = new OnlineOrderManager();
 
     constructor (protected name: string, protected location: string) {}
 }

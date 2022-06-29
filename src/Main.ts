@@ -14,7 +14,6 @@ import { Food } from "./manu/food/Food";
 import { ManuManager } from "./manu/ManuManager";
 import { TypeMeal } from "./manu/TypeMeal";
 import { Order } from "./order/Order";
-import { Pay } from "./payment/Pay";
 import { Restaurant } from "./Restaurant";
 import { Kitchen } from "./room/Kitchen";
 import { EatingRoom } from "./room/EatingRoom";
@@ -45,6 +44,7 @@ chanSokRestaurent.manu.manuList.addFood(susiFood);
 
 let soapSamon = new Food('soapSamon',TypeMeal.FOOD,60);
 chanSokRestaurent.manu.manuList.addFood(soapSamon);
+console.log(chanSokRestaurent);
 
 // add drink
 let coffee = new Drink('coffee',TypeMeal.DRINK,2);
@@ -67,19 +67,21 @@ customer2Order.addMeal(soapSamon);
 customer2Order.addMeal(coffee);
 customer2Order.addMeal(coca);
 
-// add room 
-let firstFlor = new EatingRoom(1);
-let secondFlor = new EatingRoom(2);
-let thirthFlor = new EatingRoom(3);
+console.log(customer2Order);
 
-// add Tables
-let table1 = new Table(1);
-let table2 = new Table(2);
-let table3 = new Table(3);
+// // add room 
+// let firstFlor = new EatingRoom(1);
+// let secondFlor = new EatingRoom(2);
+// let thirthFlor = new EatingRoom(3);
 
-// add kitchen
-let kitchen = new Kitchen()
-chanSokRestaurent.rooms.setKitChen(kitchen);
+// // add Tables
+// let table1 = new Table(1);
+// let table2 = new Table(2);
+// let table3 = new Table(3);
 
-// add payment
+// // add kitchen
+// let kitchen = new Kitchen()
+// chanSokRestaurent.rooms.setKitChen(kitchen);
+
+// // add payment
 
