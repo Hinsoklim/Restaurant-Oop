@@ -2,6 +2,7 @@ import { Time } from "../../calendarManager/Time";
 import { TimeWork } from "../../calendarManager/TimeWork";
 import { Gender } from "../Gender";
 import { Person } from "../Person";
+import { StaffCategory } from "../StaffCategory";
 
 
 /**
@@ -14,7 +15,8 @@ export abstract class Staff extends Person {
     name: string,
     age: number,
     gender: Gender,
-    address: string
+    address: string,
+    protected staffCategory: StaffCategory,
   ) {
     super(name, age, gender,address);
   }

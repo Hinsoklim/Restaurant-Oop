@@ -5,9 +5,9 @@ import { Staff } from "./staff";
 
 export class Security extends Staff {
   constructor(
-    protected category: StaffCategory.SECURITY, 
+    staffCategory: StaffCategory, 
     name: string, age: number, 
     gender: Gender,address: string) {
-    super(name, age, gender, address);
+    super(name, age, gender, address,staffCategory);
   }
 }
