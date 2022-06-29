@@ -1,8 +1,9 @@
-import { Customer } from "../human/customer/Customer";
+
 import { Meal } from "../manu/Meal";
-export class Order {
+export abstract class Order {
     protected orderFoods: Meal[] = [];
-    constructor(protected customer: Customer,protected roomId:number, protected tableId:number) {}
+
+    constructor(protected date: Date) {}
 
     // add food to the orderFoods
     addMeal(newMeal: Meal) {
@@ -18,17 +19,5 @@ export class Order {
         return totalMoney;
     }
 
-    // get customer
-    getCustomer() {
-        return this.customer;
-    }
-
-    getRoomId() {
-        return this.roomId;
-    }
-
-    getTableId() {
-        return this.tableId;
-    }
 
 }

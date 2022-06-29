@@ -6,6 +6,7 @@ import { ManuManager } from "./manu/ManuManager";
 import { OrderManager } from "./order/OrderManager";
 import { OnlineOrderManager } from "./onlineOrder/OnlineOrderManager";
 
+
 export class Restaurant {
     
     // All Properties are available in this class

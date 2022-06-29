@@ -18,4 +18,8 @@ export abstract class Person {
   setPhone(phone: number) {
     this.phone = phone;
   }
+
+  getPhoneNumber() {
+    return this.phone;
+  }
 }

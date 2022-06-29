@@ -1,26 +1,16 @@
 import { TypeCard } from "./TypeCard";
-
+import { Date } from "../calendarManager/Date";
+import { Bank } from "../onlineOrder/bank/Bank";
+import { Person } from "../human/Person";
 export class CreditCard {
-    protected balance: number = 0;
     constructor
         (
             protected creditNumber: number,
-            protected nameOnCreditCard: string,
-            protected expiryYear: number,
-            protected typeCard: TypeCard
-        ) { }
+            protected expiryYear: Date,
+            protected typeCard: TypeCard,
+            protected bank: Bank,
+            protected person: Person,
+    ) { }
 
-    deposit(amount: number) {
-        return this.balance + amount;
-    }
-
-    withDrow(amount: number) {
-        if(this.balance > amount) {
-            return this.balance - amount;
-        }
-        else {
-            console.log("Your balance is less than the amount");
-        }
-    }
-
+    getBank() { return this.bank; }
 }

@@ -1,9 +1,11 @@
-export enum Date {
-    MONDAY = 'MONDAY',
-    TUESDAY = 'TUESDAY',
-    WEDNESDAY = 'WEDNESDAY',
-    THURSDAY = 'THURSDAY',
-    FRIDAY = 'FRIDAY',
-    SATURDAY = 'SATURDAY',
-    SUNDAY = 'SUNDAY',
+import { Day } from "./Day";
+import { Month } from "./Month";
+
+export class Date {
+    constructor
+    (
+        protected day: Day, 
+        protected month: Month,
+        protected year: number
+    ) {}
 }

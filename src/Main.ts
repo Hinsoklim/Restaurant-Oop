@@ -58,16 +58,8 @@ let donat = new Cake('donat',TypeMeal.CAKE,1.5);
 chanSokRestaurent.manu.manuList.addCake(donat);
 
 // custromer order
-let customer1Order = new Order(soklim,3,2);
-customer1Order.addMeal(susiFood);
-customer1Order.addMeal(coffee);
 
-let customer2Order = new Order(sreyMoa,3,1);
-customer2Order.addMeal(soapSamon);
-customer2Order.addMeal(coffee);
-customer2Order.addMeal(coca);
 
-console.log(customer2Order);
 
 // // add room 
 // let firstFlor = new EatingRoom(1);

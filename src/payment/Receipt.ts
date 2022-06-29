@@ -1,4 +1,4 @@
-import { Waiter } from "../human/staff/Waiter";
+import { Staff } from "../human/staff/staff";
 import { Order } from "../order/Order";
 import { Cash } from "./Cash";
 import { CreditCard } from "./CreditCard";
@@ -9,7 +9,7 @@ export class Receipt {
     protected pay: Pay;
     constructor( 
         protected order: Order,
-        protected waiter: Waiter
+        protected staff: Staff
     ) { }
 
     getTotalOrder() {
@@ -31,13 +31,17 @@ export class Receipt {
     }
 
     doPayCard(card: CreditCard) {
-       let moneyPay = card.withDrow(this.order.getTotalPay());
-       if(moneyPay !== undefined) {
-        let newPay = new Pay(moneyPay);
+       let moneyNeedPay = card.getBank().withDrow(this.order.getTotalPay());
+       if(moneyNeedPay !== undefined) {
+        let newPay = new Pay(moneyNeedPay);
         return this.pay = newPay;
        }
        else {
         console.log("Pay card not found");
        }
+    }
+
+    getPay() {
+        return this.pay;
     }
 }
