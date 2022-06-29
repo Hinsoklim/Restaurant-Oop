@@ -1,4 +1,4 @@
-import { Customer } from "../human/customer/Customer";
+import { Waiter } from "../human/staff/Waiter";
 import { Order } from "../order/Order";
 import { Pay } from "./Pay";
 
@@ -6,6 +6,7 @@ export class Receipt {
     protected pay: Pay;
     constructor( 
         protected order: Order,
+        protected waiter: Waiter
     ) { }
 
     getTotalOrder() {
