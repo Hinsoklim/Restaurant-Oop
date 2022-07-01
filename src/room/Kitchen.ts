@@ -13,4 +13,8 @@ export class Kitchen {
         }
     }
 
+    getChef() {
+        return this.chefs;
+    }
+
 }

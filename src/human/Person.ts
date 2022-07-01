@@ -22,4 +22,12 @@ export abstract class Person {
   getPhoneNumber() {
     return this.phone;
   }
+
+  getName() {
+    return this.name;
+  }
+
+  getAddress() {
+    return this.address;
+  }
 }

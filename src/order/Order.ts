@@ -1,5 +1,6 @@
 
 import { Meal } from "../manu/Meal";
+import { Date } from "../calendarManager/Date";
 export abstract class Order {
     protected orderFoods: Meal[] = [];
 
